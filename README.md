@@ -1,4 +1,4 @@
-# AI-powered Chat-pdf
+# AI-powered Chat-PDF 
 
 Tech stack:
 ```
