@@ -4,6 +4,8 @@ import {Inbox} from "lucide-react"
 import {useDropzone} from 'react-dropzone'
 import { uploadToS3 } from '@/lib/s3'
 
+const MAX_SIZE = 10*1024*1024
+
 type Props = {}
 
 const FileUpload = (props: Props) => {
@@ -12,7 +14,7 @@ const FileUpload = (props: Props) => {
     maxFiles:1,
     onDrop: async (files)=>{
      const file=files[0];
-     if(file.size>10*1024*1024){
+     if(file.size>MAX_SIZE){
       alert("Please upload files of size less than 10MB")
       return
      }
