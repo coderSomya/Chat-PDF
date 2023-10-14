@@ -1,5 +1,6 @@
 "use client"
 
+import FileUpload from "@/components/ui/FileUpload";
 import { Button } from "@/components/ui/button";
 import { UserButton, useClerk } from "@clerk/nextjs";
 import { clients } from "@clerk/nextjs/api";
@@ -29,7 +30,7 @@ export default function Home() {
 
        <div className="w-full mt-4">{
         isAuth ?
-        (<h1>File upload</h1>)
+        (<FileUpload/>)
         :
         (<Link href="/sign-in">
         <Button className="gap-3">
